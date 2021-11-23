@@ -1,0 +1,39 @@
+<h5 >Inventario</h5>
+
+        <div class="buscar">
+           
+                <input type="text" class="" placeholder="Buscar" id="buscar">
+                <button class="btn"><span class="fas fa-search"></span></button>
+     
+        </div>
+     
+       
+    <div id="main-container">
+            <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+
+                <button class="btn btn-outline-black" onclick="editar()" routerLink="/administrador/parametros/inventarios/editar-inventarios"><span class="fas fa-edit"></span></button>
+                    <button class="btn btn-outline-black" onclick="eliminar();"><span class="fas fa-trash-alt"></span></button>
+                </td>
+          </tr>
+         
+        </tbody>
+      </table>
+      <div class="text-end">
+          <button class="btn btn-outline-black" onclick="guardar();" routerLink="/administrador/parametros/inventarios/editar-inventarios"><span class="fas fa-save"></span> Agregar</button>
+          
+ 
+        </div>
+    </div>

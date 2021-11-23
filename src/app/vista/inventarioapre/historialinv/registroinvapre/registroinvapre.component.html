@@ -1,0 +1,85 @@
+<div class="row">
+    <div class="col">
+        <h5 class="text-start">Registro de inventario</h5>
+    </div>
+    <div class="col">
+        <form >
+            <div class="d-flex text-center justify-content-end" >
+                <input class="form-control search" type="text" placeholder="Buscar">
+                <button class="btn bt" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="text-center my-5">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Imagen</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
+                <th>Activo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let inventario of inventario">
+                <td>{{inventario.categoria}}</td>
+                <td><img class="img-fluid" width="100"  src="{{inventario.imagen}}" alt=""></td>
+                <td>{{inventario.marca}}</td>
+                <td>
+                    <input class="se form-control mx-auto text-center" size="1" type="text" value="{{inventario.cantidad}}">
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio1" value="option1">
+                        <label class="form-check-label" for="Radio1">Sí</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio2" value="option2">
+                        <label class="form-check-label" for="Radio2">No</label>
+                      </div>
+                </td>
+                <td>
+                    <select class="form-select custom-se">
+                        <option class="selectedI" value="{{inventario.estado}}"  >
+                            {{inventario.estado}}
+                        </option>
+                        <option class="normal" *ngFor="let estados of estados" value="{{estados}}">
+                            {{estados}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form>
+        <div class="row align-items-center">
+            <div class="col-sm-4">
+                <textarea style="height: 130px;" class="form-control" placeholder="No hay observaciones"></textarea>
+            </div>
+            <div class="col-sm-4">
+                <select class="form-select custom-se" id="ambiente" (change)="cambiarBloque('ambiente')" (load)="cambiarBloque('ambiente')">
+                    <option class="normal" *ngFor="let ambiente of ambientes" value="{{ambiente.codigo}}">
+                        {{ambiente.codigo}}
+                    </option>
+                </select>
+                <select class="form-select custom-se my-2" id="bloque">
+                    <option class="op">Seleccionar</option>
+                </select>
+                <input class="form-control" placeholder="zona" style="width:70%;margin:auto" type="text">
+            </div>
+            <div class="col-sm-1 text-end">
+                <button class="btn btn-primary btn-normal"><span>Recibido</span></button>
+            </div>
+            <div class="col-sm-1 text-end">
+                <button class="btn btn-primary btn-normal"><span>No Recibido</span></button>
+            </div>
+            <div class="col-sm-2 text-end">
+                <button class="btn btn-primary btn-normal"><i class="fas fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </form>
+    
+</div>

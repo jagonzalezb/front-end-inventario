@@ -1,0 +1,77 @@
+<div class="mg">
+    <div class="row m-120 p-120 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="w-auto container">
+                <div class="bg-ligh rounded shadow-lg borde">
+                    <div class="mx-auto general" style="background-color:#D8D8D8">
+                        <div class="row titulo">
+
+                            <h4 class=" text-center">Crear o Modificar Usuario</h4>
+
+                        </div>
+                        <div class="row mt-9">
+                            <div class="col-12 mx-auto px-9 margen">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form class="datos">
+                                            <div class="row ">
+                                               
+                                    
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="text" required id="nombre-usuario">
+                                                        <label class="input-label" for="nombre-usuario">
+                                                            Username:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <input type="password" required id="password-usuario">
+                                                        <label class="input-label" for="password-usuario">
+                                                            Password:
+                                                        </label>
+                                                    </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="i-group">
+                                                        <label class="label" for="telefono-usuario">
+                                                            Activo:
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio1" value="option1">
+                                                        <label class="form-check-label" for="Radio1">Sí</label>
+                                                      </div>
+                                                      <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio2" value="option2">
+                                                        <label class="form-check-label" for="Radio2">No</label>
+                                                      </div>
+                                                    <p>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="boton1">
+                                                        <button class="btn btn-outline-black"
+                                                        onclick="eliminar();" routerLink="/administrador/seguridad/usuario"> Guardar</button>
+                                                            
+                                                    </div>
+                                                    <div class="boton2"><button class="btn btn-outline-black"
+                                                        onclick="guardar();">Modificar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

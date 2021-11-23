@@ -1,0 +1,21 @@
+<div *ngIf="isf()">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col mt-5" style="margin-bottom: 50px;">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+    <div *ngIf="!isf()">
+        <div [ngSwitch]="router.url">
+            <app-registro *ngSwitchCase="'/formulario/registro'"></app-registro>
+            <app-clave-olvidada *ngSwitchCase="'/formulario/clave-olvidada'"></app-clave-olvidada>
+            <app-inicio-sesion *ngSwitchDefault></app-inicio-sesion>
+        </div>
+    </div>
+<div *ngIf="isf()">
+    <app-footer></app-footer>
+</div>

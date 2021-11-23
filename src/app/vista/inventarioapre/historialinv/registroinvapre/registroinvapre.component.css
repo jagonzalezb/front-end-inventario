@@ -1,0 +1,54 @@
+.selectedI{
+    font-weight: bolder;
+}
+.normal{
+    color:#000;
+}
+.form-select{
+    width: 70%;
+    margin:auto;
+    height: 40px;
+    border-radius: 9px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+.se.form-control{
+    width: 50%;
+    margin:auto;
+    height: 40px;
+    border-radius: 9px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-control{
+  border:2px solid #000;
+  border-radius: 9px;
+}
+select {
+    background-image:
+    linear-gradient(45deg, transparent 50%, #000 50%),
+    linear-gradient(135deg, #000 50%, transparent 50%),
+    linear-gradient(to right, #000 4%, #fff 0%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    3em 2.8em;
+  background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    
+  }
+  textarea{
+    border: 2px solid #828282!important;
+    border-radius: 9px;
+  }
